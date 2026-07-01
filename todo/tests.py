@@ -5,6 +5,7 @@ from todo.models import Task
 
 # (以前に作成した SampleTestCase があればそのまま残しておきます)
 
+
 class TaskModelTestCase(TestCase):
     def test_create_task1(self):
         due = timezone.make_aware(datetime(2024, 6, 30, 23, 59, 59))
@@ -47,6 +48,7 @@ class TaskModelTestCase(TestCase):
         task.save()
 
         self.assertFalse(task.is_overdue(current))
+
 
 class TodoViewTestCase(TestCase):
     def test_index_get(self):

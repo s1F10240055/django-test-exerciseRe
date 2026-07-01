@@ -15,5 +15,4 @@ class Task(models.Model):
         if self.due_at is None:
             return False
         return self.due_at < dt
-    
-# ↑ファイルの最後は必ず改行を入れる（空行にする）
+
